@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activitybackground"
+    tools:context=".KullaniciKaydiActivity">
+
+    <EditText
+        android:id="@+id/newNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="İsminiz"
+        android:inputType="textPersonName"
+        android:textColor="#CFCFCF"
+        android:textColorHint="#A6A6A6"
+        app:layout_constraintBottom_toTopOf="@+id/newSurnameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/newSurnameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Soyisminiz"
+        android:inputType="textPersonName"
+        android:textColor="#CFCFCF"
+        android:textColorHint="#A6A6A6"
+        app:layout_constraintBottom_toTopOf="@+id/newPasswordText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/newPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="196dp"
+        android:ems="10"
+        android:hint="Şifreniz"
+        android:inputType="textPersonName"
+        android:textColor="#CFCFCF"
+        android:textColorHint="#A6A6A6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:onClick="addNewUser"
+        android:text="Kullanıcı Ekle"
+        app:layout_constraintBottom_toTopOf="@+id/grubuOlusturButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newNameText"
+        app:layout_constraintTop_toBottomOf="@+id/usersListView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/grubuOlusturButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="grubuOlustur"
+        android:text="Grubu Oluştur"
+        app:layout_constraintBottom_toBottomOf="@+id/newPasswordText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newPasswordText" />
+
+    <ListView
+        android:id="@+id/usersListView"
+        android:layout_width="281dp"
+        android:layout_height="226dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/myshape"
+        android:backgroundTint="#706F6F"
+        app:layout_constraintBottom_toTopOf="@+id/newNameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="199dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:text="Kullanıcı Listesi"
+        android:textAlignment="center"
+        android:textColor="#8F8E8E"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/usersListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
